@@ -1,0 +1,15 @@
+.root-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    align-items: center;
+}
+.heading {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 30px
+}
+
+@import './component/Question';
+@import './component/Result';

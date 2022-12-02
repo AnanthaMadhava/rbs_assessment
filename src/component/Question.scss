@@ -1,0 +1,41 @@
+.question-answer-container {
+    border: .5px solid #C8BBBA;
+    border-radius: 5px;
+    padding: 30px;
+    .question {
+        &-container {
+            div {
+                margin: 5px;
+            }
+        }
+        &-count {
+            font-size: 30px;
+            font-weight: 900;
+        }
+    }
+    .answer {
+        &-ans{
+            margin: 5px;
+        }
+    }
+    .button {
+        &-container {
+            display: flex;
+            justify-content: end;
+            width: 600px;
+        }
+        &-disable {
+            display: none;
+        }
+        &-pri {
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border-color: #007bff;
+            padding: 10px 20px;
+        }
+        &-sub {
+            width: 100%;
+        }
+    }
+}
