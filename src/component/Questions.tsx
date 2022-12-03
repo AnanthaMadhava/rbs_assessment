@@ -5,9 +5,15 @@ import { QuestionsList, AnswerOptions } from '../types';
 const Questions = () => {
     const [ currentAnswer, setCurrentAnswer ] = useState({});
     const [ currentIndex, setCurrentIndex ] = useState(null);
-    const { questions, setQuestions, currentQuestion, setCurrentQuestion, setShowScore }: any = useContext(QuestionContext);
+    const [ count, setCount ] = useState(0);
+    const { questions, setQuestions, currentQuestion, setCurrentQuestion, setShowScore, score, setScore }: any = useContext(QuestionContext);
 
     const updateSelected = (list: AnswerOptions, id: any) => {
+        if(list.iscorrect) {
+            setCount(1)
+        } else {
+            setCount(0)
+        }
         setCurrentIndex(id);
         setCurrentAnswer(list);
     }
@@ -38,6 +44,7 @@ const Questions = () => {
             }
         })
         setQuestions(ansUpdate);
+        setScore(score + count);
     }
 
     const onNext = () => {
